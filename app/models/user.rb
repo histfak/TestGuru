@@ -4,6 +4,6 @@ class User < ApplicationRecord
   has_many :own_tests, class_name: 'Test', foreign_key: :author_id
 
   def taken_by_level(level)
-    Test.joins(:user_tests).where(level: level, user_tests: { user_id: id })
+    tests.where(level: level)
   end
 end

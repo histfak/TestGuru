@@ -12,15 +12,15 @@ categories = Category.create!([{ title: 'Естественные науки' },
                                { title: 'Гуманитарные науки' },
                                { title: 'Информационные технологии' }])
 
-users = User.create!([{ name: 'Редактор', editor: true },
-                      { name: 'Пользователь 1', editor: false },
-                      { name: 'Пользователь 2', editor: false },
-                      { name: 'Пользователь 3', editor: false }])
+users = User.create!([{ name: 'Пользователь 0' },
+                      { name: 'Пользователь 1' },
+                      { name: 'Пользователь 2' },
+                      { name: 'Пользователь 3' }])
 
-tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id },
-                      { title: 'Химия', level: 1, category_id: categories[0].id },
-                      { title: 'История', level: 0, category_id: categories[1].id },
-                      { title: 'TCP/IP', level: 2, category_id: categories[2].id }])
+tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id, author_id: users[1].id },
+                      { title: 'Химия', level: 1, category_id: categories[0].id, author_id: users[1].id },
+                      { title: 'История', level: 0, category_id: categories[1].id, author_id: users[2].id },
+                      { title: 'TCP/IP', level: 2, category_id: categories[2].id, author_id: users[3].id }])
 
 questions = Question.create!([{ body: 'Химическое вещество, которое разрушает веретено деления, что приводит к полиплоидии, называется:', test_id: tests[0].id },
                               { body: 'Вид состоит из нескольких …', test_id: tests[0].id },

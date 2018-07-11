@@ -6,6 +6,6 @@ class Question < ApplicationRecord
   validate :validate_answers_number
 
   def validate_answers_number
-    errors.add(:base) if (1..4).include?(answers.count)
+    errors.add(:base) unless (1..4).include?(answers.count)
   end
 end

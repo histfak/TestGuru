@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
 
-  def taken_by_level(level)
-    tests.where(level: level)
+  def tests_taken_by_level(level)
+    tests.by_level(level)
   end
 end

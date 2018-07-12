@@ -3,5 +3,5 @@ class Category < ApplicationRecord
 
   validates :title, presence: true
 
-  scope :list_in_asc, -> { order(title: :asc) }
+  scope :sorted_by_title, -> { order(title: :asc) }
 end

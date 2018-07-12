@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # i18n
 gem 'rails-i18n'
+
+# pry
+gem 'pry-rails'

@@ -16,9 +16,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    Question.create(prepare_question)
+    Question.create(params.permit(:body, :test_id))
     render plain: 'Done!'
-    byebug
   end
 
   def destroy
@@ -34,12 +33,6 @@ class QuestionsController < ApplicationController
 
   def find_question_number
     @question_number = params[:id].to_i - 1
-  end
-
-  def prepare_question
-    @question_params = params.require(:question).permit(:body)
-    @question_params[:test_id] = params[:test_id]
-    @question_params
   end
 
   def rescue_with_record_not_found

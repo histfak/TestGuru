@@ -1,0 +1,10 @@
+<% if recource.errors.present? %>
+<div>
+  <h2><%= pluralize(recource.errors.count, 'error') %> detected:</h2>
+  <ul>
+    <% recource.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

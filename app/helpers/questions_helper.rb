@@ -1,9 +1,5 @@
 module QuestionsHelper
-  def question_header(mode)
-    if mode == 'edit'
-      render inline: '<h1>Edit \"<%= @question.body %>\" question</h1>'
-    elsif mode == 'create'
-      render inline: '<h1>Create a new question</h1>'
-    end
+  def question_header(question)
+    question.new_record? ? "Create New #{question.test.title} Question" : "Edit #{question.test.title} Question"
   end
 end

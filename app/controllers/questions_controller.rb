@@ -8,11 +8,11 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def create
-    @question = @test.questions.create(question_params)
+    @question = @test.questions.new(question_params)
     if @question.save
       redirect_to @question
     else
@@ -33,14 +33,10 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to current_test_path
+    redirect_to test_path(@question.test)
   end
 
   private
-
-  def current_test_path
-    test_path(@question.test)
-  end
 
   def find_test
     @test = Test.find(params[:test_id])
@@ -51,7 +47,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body, :test_id)
+    params.require(:question).permit(:body)
   end
 
   def rescue_with_record_not_found

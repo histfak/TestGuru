@@ -5,8 +5,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User'
 
-  validates :title, presence: true, uniqueness: true
-  validates :level, numericality: { greater_than_or_equal_to: 0 }, uniqueness: true
+  validates :title, presence: true, uniqueness: { scope: :level }
+  validates :level, numericality: { greater_than_or_equal_to: 0 }
 
   scope :by_level, ->(level) { where(level: level) }
   scope :easy, -> { by_level(0..1) }

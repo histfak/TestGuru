@@ -18,7 +18,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_position
-    questions_number - (test.questions.last.id - current_question.id)
+    test.questions.count - (test.questions.last.id - current_question.id)
   end
 
   def count_percents
@@ -37,10 +37,6 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
-  end
-
-  def questions_number
-    self.test.questions.count
   end
 
   def before_update_set_next_question

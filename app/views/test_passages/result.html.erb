@@ -1,0 +1,12 @@
+<h1>The <%= @test_passage.test.title %> Test was completed!</h1>
+
+<b>You result is:</b>
+<% if @test_passage.count_percents >= 85 %>
+  <span class="success"><h2><%= @test_passage.count_percents %></h2></span>
+  <b>You have successfully passed the test!</b>
+<% else %>
+  <span class="fail"><h2><%= @test_passage.count_percents %></h2></span>
+  <b>It's not enough to pass the test.</b>
+<% end %>
+<br>
+<%= link_to 'Go to the test list', tests_path %>

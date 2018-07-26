@@ -1,0 +1,5 @@
+<h1>The <%= @test_passage.test.title %> Test was completed!</h1>
+
+<b>You result is:</b>
+<span class="<%= result_style(@test_passage) %>"><h2><%= @test_passage.count_percents %></h2></span><br><br>
+<%= link_to 'Go to the test list', tests_path %>

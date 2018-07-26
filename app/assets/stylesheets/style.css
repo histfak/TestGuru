@@ -1,0 +1,17 @@
+.success
+{
+    color: green;
+}
+
+.fail
+{
+    color: red;
+}
+
+.success:after {
+    content: "You have successfully passed the test!";
+}
+
+.fail:after {
+    content: "It's not enough to pass the test.";
+}

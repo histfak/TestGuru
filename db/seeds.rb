@@ -123,10 +123,3 @@ Answer.create!([{ body: 'аспирином', question_id: questions[0].id, corr
                 { body: 'передают информацию в виде последовательности дейтаграмм', question_id: questions[19].id, correct: false },
                 { body: 'в месте приема выполняют сборку дейтаграмм в полные сообщения', question_id: questions[19].id, correct: false },
                 { body: 'поддерживают все стандартные протоколы физического и канального уровне', question_id: questions[19].id, correct: true }])
-
-UserTest.create!([{ user_id: users[1].id, test_id: tests[0].id },
-                  { user_id: users[1].id, test_id: tests[1].id },
-                  { user_id: users[2].id, test_id: tests[2].id },
-                  { user_id: users[2].id, test_id: tests[3].id },
-                  { user_id: users[3].id, test_id: tests[2].id },
-                  { user_id: users[3].id, test_id: tests[1].id }])

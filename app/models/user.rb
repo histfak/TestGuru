@@ -4,10 +4,8 @@ class User < ApplicationRecord
   has_many :own_tests, class_name: 'Test', foreign_key: :author_id
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, on: :create }
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
 
-  # validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
-  # validates :password, confirmation: true
   has_secure_password
 
   def tests_taken_by_level(level)

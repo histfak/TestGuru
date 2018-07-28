@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :find_user, on: %i[create update]
+  before_action :find_user, on: :create
 
   def new
   end

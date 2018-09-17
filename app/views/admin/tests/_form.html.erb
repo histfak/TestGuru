@@ -1,0 +1,24 @@
+<%= form_with model: [:admin, @test], local: true do |form| %>
+
+  <%= render 'shared/errors', recource: @test %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :level %><br>
+    <%= form.number_field :level %>
+  </p>
+
+  <p>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </p>
+
+  <%= form.submit %>
+<% end %>
+<p><%= link_to 'Back', admin_tests_path %></p>
+
+

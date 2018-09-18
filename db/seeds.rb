@@ -12,10 +12,10 @@ categories = Category.create!([{ title: 'Естественные науки' },
                                { title: 'Гуманитарные науки' },
                                { title: 'Информационные технологии' }])
 
-users = User.create!([{ name: 'Пользователь 0', email: "user0@example.com" },
-                      { name: 'Пользователь 1', email: "user1@example.com" },
-                      { name: 'Пользователь 2', email: "user2@example.com" },
-                      { name: 'Пользователь 3', email: "user3@example.com" }])
+users = User.create!([{ name: 'Пользователь 0', email: "user0@example.com", password: "test00" },
+                      { name: 'Пользователь 1', email: "user1@example.com", password: "test01" },
+                      { name: 'Пользователь 2', email: "user2@example.com", password: "test02" },
+                      { name: 'Пользователь 3', email: "user3@example.com", password: "test03" }])
 
 tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id, author_id: users[1].id },
                       { title: 'Химия', level: 2, category_id: categories[0].id, author_id: users[1].id },

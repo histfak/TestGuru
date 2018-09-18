@@ -14,7 +14,7 @@ module TestGuru
     # Time zone
     config.time_zone = 'Minsk'
     config.active_record.default_timezone = :utc
-    config.i18n.default_locale = :ru
+    config.i18n.default_locale = :en
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

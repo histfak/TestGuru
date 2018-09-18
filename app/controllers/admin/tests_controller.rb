@@ -1,5 +1,4 @@
-class Admin::TestsController < ApplicationController
-  before_action :authenticate_user!
+class Admin::TestsController < Admin::AdminController
   before_action :find_test, only: %i[edit show update destroy start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
@@ -40,11 +39,6 @@ class Admin::TestsController < ApplicationController
     redirect_to admin_tests_path
   end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
-
   private
 
   def find_test
@@ -52,7 +46,7 @@ class Admin::TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 
   def rescue_with_record_not_found

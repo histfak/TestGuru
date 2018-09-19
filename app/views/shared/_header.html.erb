@@ -1,9 +1,9 @@
 <h1><%= link_to 'TestGuru', root_path %></h1>
 <% if user_signed_in? %>
-  <p class="nav user">Welcome, <b><%= current_user.name %>, Guru</b><br>
-    <b><%= link_to 'Logout', destroy_user_session_path, method: :delete %></b>
+  <p class="nav user"><b><%= t('shared.header.welcome', name: current_user.name) %></b><br>
+    <b><%= link_to t('links.logout'), destroy_user_session_path, method: :delete %></b>
   </p>
 <% else %>
-  <p class="nav greetings"><b><%= link_to 'Sign up', new_user_registration_path %> <%= link_to 'Log in', new_user_session_path %></b></p>
+  <p class="nav greetings"><b><%= link_to t('links.signup'), new_user_registration_path %> <%= link_to t('links.login'), new_user_session_path %></b></p>
 <% end %>
 

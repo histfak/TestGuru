@@ -1,24 +1,24 @@
 <p>
-  <strong>Test ID:</strong>
+  <strong><%= t('.id') %></strong>
   <%= @question.test_id %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong><%= t('.body') %></strong>
   <%= @question.body %>
 </p>
 
-<h2>Answers</h2>
+<h2><%= t('.answers') %></h2>
 
-<%= link_to 'New answer', new_admin_question_answer_path(@question) %><br>
+<%= link_to t('links.new_answer'), new_admin_question_answer_path(@question) %><br>
 
 <table>
   <tr>
-    <th>Questions</th>
-    <th colspan="3">Actions</th>
+    <th><%= t('.questions') %></th>
+    <th colspan="3"><%= t('.actions') %></th>
   </tr>
   <%= render @question.answers %>
 </table>
 
-<%= link_to 'Edit', edit_admin_question_path(@question) %>
-<%= link_to 'Back', admin_test_path(@question.test) %>
+<%= link_to t('links.edit'), edit_admin_question_path(@question) %>
+<%= link_to t('links.back'), admin_test_path(@question.test) %>

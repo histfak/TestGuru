@@ -1,2 +1,112 @@
 ru:
   hello: "Привет, мир!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Содержание вопроса"
+      answer:
+        body: "Содержание ответа"
+        correct: "Правильный"
+    select:
+      prompt: "Выберите категорию"
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+    header:
+      welcome: "Добро пожаловать, %{name}"
+
+  tests:
+    index:
+      header: "Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Кол-во вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершён!"
+      desc: "Ваш результат:"
+    show:
+      header: "Прохождение теста %{title}"
+      questions: "Вопросы:"
+      total: "Всего:"
+      current: "Текущий:"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      index:
+        header: "Тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+      edit:
+        header: "Редактировать тест %{title}"
+      new:
+        header: "Создать новый тест"
+      show:
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+    answers:
+      edit:
+        header: "Редактирование вопроса"
+      new:
+        header: "Создание вопроса"
+      show:
+        header: "Вопрос"
+    questions:
+      show:
+        id: "ID теста:"
+        body: "Содержание:"
+        answers: "Вопросы"
+        questions: "Ответы"
+        actions: "Действия"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  links:
+    back: "Назад"
+    edit: "Редактировать"
+    delete: "Удалить"
+    show: "Показать"
+    confirm: "Вы уверены?"
+    new_answer: "Создать новый ответ"
+    new_test: "Создать новый тест"
+    new_question: "Создать новый вопрос"
+    signup: "Зарегистрироваться"
+    login: "Войти"
+    logout: "Выйти"
+    home: "К списку тестов"
+
+  label:
+    answer: "Ответ"
+    correct: "Правильность"

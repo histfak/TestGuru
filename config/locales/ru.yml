@@ -1,5 +1,5 @@
 ru:
-  hello: "Привет, мир!"
+  hello: "Привет"
 
   helpers:
     submit:
@@ -106,6 +106,7 @@ ru:
     login: "Войти"
     logout: "Выйти"
     home: "К списку тестов"
+    admin: "Панель администратора"
 
   label:
     answer: "Ответ"

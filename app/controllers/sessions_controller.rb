@@ -4,6 +4,6 @@ class SessionsController < Devise::SessionsController
   private
 
   def show_flash
-    flash[:notice] = "Hello, #{current_user.name}!"
+    flash[:notice] = "#{t('hello')}, #{current_user.name}!"
   end
 end

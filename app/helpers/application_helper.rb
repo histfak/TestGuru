@@ -1,5 +1,7 @@
 module ApplicationHelper
-  def flash_message(type)
-    content_tag :p, flash[type], class: "flash #{type}" if flash[type]
+  FLASH_TYPES = { notice: 'alert-primary', alert: 'alert-warning', error: 'alert-danger' }.freeze
+
+  def flash_type(type)
+    FLASH_TYPES[type.to_sym]
   end
 end

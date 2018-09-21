@@ -1,5 +1,6 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <b><%= t('.desc') %></b>
-<span class="<%= result_style(@test_passage) %>"><h2><%= @test_passage.count_percents %></h2></span><br><br>
+<span class="<%= result_style(@test_passage) %>">
+  <h2><%= @test_passage.count_percents %></h2></span><br><br>
 <%= link_to t('links.home'), tests_path %>

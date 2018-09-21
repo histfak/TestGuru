@@ -48,6 +48,10 @@ en:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      new:
+        header: "Enter the Guru Gates"
+        remember_me: "Remember me"
+        enter: "Enter"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
@@ -62,3 +66,12 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  label:
+      name: "Name"
+      pl_name: "Enter your name"
+      pl_email: "Enter your email"
+      password: "Password"
+
+  links:
+    forgot: "Forgot your password?"
+    repeat_confirmation: "Didn't receive confirmation instructions?"

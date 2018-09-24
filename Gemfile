@@ -74,3 +74,11 @@ gem 'devise', '~> 4.0'
 #UI
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+
+#Net
+#
+gem 'faraday'
+
+#Gist
+gem "octokit", "~> 4.0"
+gem 'dotenv-rails', groups: [:development, :test]

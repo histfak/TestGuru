@@ -1,6 +1,8 @@
 en:
   hello: "Hello"
 
+  gist: "A question about the %{title} test from TestGuru"
+
   helpers:
       submit:
         test:
@@ -52,6 +54,9 @@ en:
       questions: "Questions:"
       total: "Total:"
       current: "Current:"
+    gist:
+      success: "Gist has been successfully created! URL: "
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:
@@ -86,6 +91,12 @@ en:
         answers: "Questions"
         questions: "Answers"
         actions: "Actions"
+    gists:
+      index:
+      header: "List"
+      question: "Question"
+      url: "URL"
+      user: "User"
 
   tests_mailer:
     completed_test:
@@ -105,6 +116,7 @@ en:
     logout: "Log out"
     home: "Main page"
     admin: "Admin panel"
+    gists: "Gists List"
 
     label:
       answer: "Answer"

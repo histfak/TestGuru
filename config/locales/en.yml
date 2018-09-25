@@ -1,7 +1,8 @@
 en:
   hello: "Hello"
 
-  gist: "A question about the %{title} test from TestGuru"
+  services:
+    gist: "A question about the %{title} test from TestGuru"
 
   helpers:
       submit:

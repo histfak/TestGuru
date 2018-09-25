@@ -1,8 +1,8 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<b>
-  <%= t('.questions') %><br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %><br><br>
-</b>
+<p>
+  <b><%= t('.questions') %><br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %></b><br><br>
+</p>
 
 <b>
   <%= @test_passage.current_question.body %>
@@ -16,6 +16,7 @@
     </p>
   <% end %>
 
+  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
   <p><%= form.submit 'Next', class: 'btn btn-outline-primary' %></p>
 <% end %>
 

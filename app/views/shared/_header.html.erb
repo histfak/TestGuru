@@ -4,6 +4,7 @@
     <% if user_signed_in? %>
       <b><%= t('shared.header.welcome', name: current_user.name) %></b>
       <%= link_to t('links.admin'), admin_tests_path if current_user.admin? %>
+      <%= link_to t('links.gists'), admin_gists_path if current_user.admin? %>
       <%= link_to t('links.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('links.signup'), new_user_registration_path %>

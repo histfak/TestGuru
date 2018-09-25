@@ -1,6 +1,9 @@
 ru:
   hello: "Привет"
 
+  services:
+    gist: "Вопрос по тесту %{title} из проекта TestGuru"
+
   helpers:
     submit:
       test:
@@ -54,6 +57,9 @@ ru:
       questions: "Вопросы:"
       total: "Всего:"
       current: "Текущий:"
+    gist:
+      success: "Gist успешно сохранён! Ссылка: %{url}"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:
@@ -88,6 +94,12 @@ ru:
         answers: "Вопросы"
         questions: "Ответы"
         actions: "Действия"
+    gists:
+      index:
+        header: "Список"
+        question: "Вопрос"
+        url: "Ссылка"
+        user: "Пользователь"
 
   tests_mailer:
     completed_test:
@@ -107,6 +119,7 @@ ru:
     logout: "Выйти"
     home: "К списку тестов"
     admin: "Панель администратора"
+    gists: "Список гистов"
 
   label:
     answer: "Ответ"

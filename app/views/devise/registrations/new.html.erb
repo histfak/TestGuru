@@ -1,39 +1,49 @@
-<h2>Become a guru</h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2><%= t('.header') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        <p>
+          <%= f.label :name, t('.name'), class: 'form-check-label' %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= f.label :surname, t('.surname'), class: 'form-check-label' %>
+          <%= f.text_field :surname, autofocus: true, autocomplete: "surname", class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= f.label :email, t('.email'), class: 'form-check-label' %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= f.label :password, t('.password'), class: 'form-check-label' %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> <%= t('.password_min') %>)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= f.label :password_confirmation, t('.password_confirm'), class: 'form-check-label' %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+          <div class="octicon">
+            <%= octicon "check", class: "hide" %>
+            <%= octicon "x", class: "hide" %>
+          </div>
+        </p>
+
+        <div class="actions">
+          <%= f.submit t('.signup'), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname, autofocus: true, autocomplete: "surname" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

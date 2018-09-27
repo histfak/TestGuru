@@ -74,9 +74,9 @@ gem 'devise', '~> 4.0'
 #UI
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 #Net
-#
 gem 'faraday'
 
 #Gist

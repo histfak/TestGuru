@@ -1,13 +1,15 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
-  <b><%= t('.questions') %><br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %></b><br><br>
+  <b><%= t('.questions') %><br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %></b>
 </p>
-
-<b>
+<div class="progress">
+  <%= content_tag :div, t('.passed'), class: 'progress-bar progress-bar-striped progress-bar-animated bg-info', data: { current: @test_passage.current_position, all: @test_passage.test.questions.count } %>
+</div>
+<br>
+<p><b>
   <%= @test_passage.current_question.body %>
-</b>
-
+</b></p>
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>

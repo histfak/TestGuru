@@ -55,6 +55,7 @@ en:
       questions: "Questions:"
       total: "Total:"
       current: "Current:"
+      passed: "Passed"
     gist:
       success: "Gist has been successfully created! URL: "
       failure: "An error occurred while saving gist"
@@ -78,6 +79,8 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+      form_inline:
+        submit: "OK"
     answers:
       edit:
         header: "Edit question"

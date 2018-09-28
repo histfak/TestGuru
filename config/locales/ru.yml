@@ -57,6 +57,7 @@ ru:
       questions: "Вопросы:"
       total: "Всего:"
       current: "Текущий:"
+      passed: "Пройдено"
     gist:
       success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка"
@@ -80,6 +81,8 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+      form_inline:
+        submit: "OK"
     answers:
       edit:
         header: "Редактирование вопроса"

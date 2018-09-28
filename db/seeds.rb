@@ -13,7 +13,7 @@ categories = Category.create!([{ title: 'Естественные науки' },
                                { title: 'Информационные технологии' }])
 
 users = User.create!([{ name: 'Admin', email: "reboot@tut.by", password: "Reboot" },
-                      { name: 'User', email: "user@example.com", password: "User1" }])
+                      { name: 'User', email: "user@example.com", password: "TestUser" }])
 
 tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id, author_id: users[0].id },
                       { title: 'Химия', level: 2, category_id: categories[0].id, author_id: users[0].id },

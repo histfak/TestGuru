@@ -12,15 +12,13 @@ categories = Category.create!([{ title: 'Естественные науки' },
                                { title: 'Гуманитарные науки' },
                                { title: 'Информационные технологии' }])
 
-users = User.create!([{ name: 'Пользователь 0', email: "user0@example.com", password: "test00" },
-                      { name: 'Пользователь 1', email: "user1@example.com", password: "test01" },
-                      { name: 'Пользователь 2', email: "user2@example.com", password: "test02" },
-                      { name: 'Пользователь 3', email: "user3@example.com", password: "test03" }])
+users = User.create!([{ name: 'Admin', email: "reboot@tut.by", password: "Reboot" },
+                      { name: 'User', email: "user@example.com", password: "User1" }])
 
-tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id, author_id: users[1].id },
-                      { title: 'Химия', level: 2, category_id: categories[0].id, author_id: users[1].id },
-                      { title: 'История', level: 0, category_id: categories[1].id, author_id: users[2].id },
-                      { title: 'TCP/IP', level: 3, category_id: categories[2].id, author_id: users[3].id }])
+tests = Test.create!([{ title: 'Биология', level: 1, category_id: categories[0].id, author_id: users[0].id },
+                      { title: 'Химия', level: 2, category_id: categories[0].id, author_id: users[0].id },
+                      { title: 'История', level: 0, category_id: categories[1].id, author_id: users[0].id },
+                      { title: 'TCP/IP', level: 3, category_id: categories[2].id, author_id: users[0].id }])
 
 questions = Question.create!([{ body: 'Химическое вещество, которое разрушает веретено деления, что приводит к полиплоидии, называется:', test_id: tests[0].id },
                               { body: 'Вид состоит из нескольких …', test_id: tests[0].id },

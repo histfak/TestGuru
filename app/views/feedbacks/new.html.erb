@@ -1,11 +1,11 @@
-<h1 class="text-center"><%= t('services.feedback_greetings') %></h1>
+<h1 class="text-center"><%= t('feedbacks.feedback_greetings') %></h1>
 <div class="container">
   <%= form_with url: feedbacks_path, class: 'form-group' do |f| %>
     <p>
       <%= f.text_area :body, class: 'form-control', rows: 20 %>
     </p>
     <p>
-      <%= f.submit t('services.feedback_button'), class: 'btn btn-primary float-right' %>
+      <%= f.submit t('feedbacks.feedback_button'), class: 'btn btn-primary float-right' %>
     </p>
   <% end %>
 </div>

@@ -14,7 +14,7 @@ class Admin::QuestionsController < Admin::AdminController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to admin_question_path(@question), notice: t('services.question_created')
+      redirect_to admin_question_path(@question), notice: t('.question_created')
     else
       render :new
     end

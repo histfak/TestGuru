@@ -3,13 +3,13 @@ ru:
 
   services:
     gist: "Вопрос по тесту %{title} из проекта TestGuru"
-    feedback: "Оставить отзыв"
+
+  feedbacks:
+    feedback_link: "Оставить отзыв"
     feedback_button: "Отправить отзыв"
     feedback_greetings: "Ваш отзыв"
     feedback_sent: "Ваш отзыв был отправлен"
     feedback_subject: "Отзыв от пользователя %{user}"
-    answer_created: "Ответ был успешно создан"
-    question_created: "Вопрос был успешно создан"
 
   helpers:
     submit:
@@ -97,6 +97,8 @@ ru:
         header: "Создание вопроса"
       show:
         header: "Вопрос"
+      create:
+        answer_created: "Ответ был успешно создан"
     questions:
       show:
         id: "ID теста:"
@@ -104,6 +106,8 @@ ru:
         answers: "Вопросы"
         questions: "Ответы"
         actions: "Действия"
+      create:
+        question_created: "Вопрос был успешно создан"
     gists:
       index:
         header: "Список"

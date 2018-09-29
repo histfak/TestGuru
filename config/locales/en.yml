@@ -8,6 +8,8 @@ en:
     feedback_greetings: "Leave a feedback"
     feedback_sent: "Your feedback has been sent"
     feedback_subject: "A feedback from user %{user}"
+    answer_created: "Answer was successfully created"
+    question_created: "Question was successfully created"
 
   helpers:
       submit:
@@ -60,7 +62,7 @@ en:
       questions: "Questions:"
       total: "Total:"
       current: "Current:"
-      passed: "Passed"
+      passed: "Your position"
     gist:
       success: "Gist has been successfully created! URL: "
       failure: "An error occurred while saving gist"
@@ -126,6 +128,7 @@ en:
     home: "Main page"
     admin: "Admin panel"
     gists: "Gists List"
+    next: "Next"
 
     label:
       answer: "Answer"

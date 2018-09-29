@@ -19,7 +19,7 @@
   <% end %>
 
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit 'Next', class: 'btn btn-outline-primary' %></p>
+  <p><%= form.submit t('links.next'), class: 'btn btn-primary' %></p>
 <% end %>
 
 <%= link_to t('links.home'), tests_path %>

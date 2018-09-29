@@ -8,6 +8,8 @@ ru:
     feedback_greetings: "Ваш отзыв"
     feedback_sent: "Ваш отзыв был отправлен"
     feedback_subject: "Отзыв от пользователя %{user}"
+    answer_created: "Ответ был успешно создан"
+    question_created: "Вопрос был успешно создан"
 
   helpers:
     submit:
@@ -62,7 +64,7 @@ ru:
       questions: "Вопросы:"
       total: "Всего:"
       current: "Текущий:"
-      passed: "Пройдено"
+      passed: "Ваша позиция"
     gist:
       success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка"
@@ -128,6 +130,7 @@ ru:
     home: "К списку тестов"
     admin: "Панель администратора"
     gists: "Список гистов"
+    next: "Далее"
 
   label:
     answer: "Ответ"

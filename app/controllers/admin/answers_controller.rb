@@ -15,9 +15,9 @@ class Admin::AnswersController < Admin::AdminController
   end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to admin_question_path(@answer), notice: 'Answer was successfully created.'
+      redirect_to admin_question_path(@answer.question), notice: t('services.answer_created')
     else
       render :new
     end

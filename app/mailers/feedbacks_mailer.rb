@@ -1,6 +1,4 @@
 class FeedbacksMailer < ApplicationMailer
-  ADMIN = 'Admin'.freeze
-
   def send_feedback(params, current_user)
     @body = params[:body]
     @user = current_user.name

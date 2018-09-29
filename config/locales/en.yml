@@ -3,6 +3,11 @@ en:
 
   services:
     gist: "A question about the %{title} test from TestGuru"
+    feedback: "Leave a feedback"
+    feedback_button: "Send"
+    feedback_greetings: "Leave a feedback"
+    feedback_sent: "Your feedback has been sent"
+    feedback_subject: "A feedback from user %{user}"
 
   helpers:
       submit:

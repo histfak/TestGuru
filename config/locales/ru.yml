@@ -3,6 +3,11 @@ ru:
 
   services:
     gist: "Вопрос по тесту %{title} из проекта TestGuru"
+    feedback: "Оставить отзыв"
+    feedback_button: "Отправить отзыв"
+    feedback_greetings: "Ваш отзыв"
+    feedback_sent: "Ваш отзыв был отправлен"
+    feedback_subject: "Отзыв от пользователя %{user}"
 
   helpers:
     submit:

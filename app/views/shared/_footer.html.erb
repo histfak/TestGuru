@@ -2,6 +2,8 @@
   <div class="footer-copyright text-center py-3">
     <%= current_year %> <%= github_url('histfak', 'TestGuru') %><br>
     <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com/', target: '_blank' %><br>
-    <%= link_to t('services.feedback'), feedbacks_path unless current_user.admin? %>
+    <% if user_signed_in? %>
+      <%= link_to t('services.feedback'), feedbacks_path unless current_user.admin? %>
+    <% end %>
   </div>
 </footer>

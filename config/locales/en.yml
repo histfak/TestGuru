@@ -4,6 +4,13 @@ en:
   services:
     gist: "A question about the %{title} test from TestGuru"
 
+  feedbacks:
+    feedback_link: "Leave a feedback"
+    feedback_button: "Send"
+    feedback_greetings: "Leave a feedback"
+    feedback_sent: "Your feedback has been sent"
+    feedback_subject: "A feedback from user %{user}"
+
   helpers:
       submit:
         test:
@@ -55,7 +62,7 @@ en:
       questions: "Questions:"
       total: "Total:"
       current: "Current:"
-      passed: "Passed"
+      passed: "Your position"
     gist:
       success: "Gist has been successfully created! URL: "
       failure: "An error occurred while saving gist"
@@ -88,6 +95,8 @@ en:
         header: "Create question"
       show:
         header: "Question"
+      create:
+        answer_created: "Answer was successfully created"
     questions:
       show:
         id: "Test ID:"
@@ -95,6 +104,8 @@ en:
         answers: "Questions"
         questions: "Answers"
         actions: "Actions"
+      create:
+        question_created: "Question was successfully created"
     gists:
       index:
       header: "List"
@@ -121,6 +132,7 @@ en:
     home: "Main page"
     admin: "Admin panel"
     gists: "Gists List"
+    next: "Next"
 
     label:
       answer: "Answer"

@@ -11,9 +11,12 @@ function passwordMatching() {
 
     if (passwordConfirmation.value === "") {
         icon2.classList.remove('hide')
+        icon1.classList.add('hide');
     } else if (password.value === passwordConfirmation.value) {
-        icon1.classList.remove('hide')
+        icon1.classList.remove('hide');
+        icon2.classList.add('hide');
     } else {
-        icon2.classList.remove('hide')
+        icon2.classList.remove('hide');
+        icon1.classList.add('hide');
     }
 }

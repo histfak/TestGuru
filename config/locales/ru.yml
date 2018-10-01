@@ -4,6 +4,13 @@ ru:
   services:
     gist: "Вопрос по тесту %{title} из проекта TestGuru"
 
+  feedbacks:
+    feedback_link: "Оставить отзыв"
+    feedback_button: "Отправить отзыв"
+    feedback_greetings: "Ваш отзыв"
+    feedback_sent: "Ваш отзыв был отправлен"
+    feedback_subject: "Отзыв от пользователя %{user}"
+
   helpers:
     submit:
       test:
@@ -57,7 +64,7 @@ ru:
       questions: "Вопросы:"
       total: "Всего:"
       current: "Текущий:"
-      passed: "Пройдено"
+      passed: "Ваша позиция"
     gist:
       success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка"
@@ -90,6 +97,8 @@ ru:
         header: "Создание вопроса"
       show:
         header: "Вопрос"
+      create:
+        answer_created: "Ответ был успешно создан"
     questions:
       show:
         id: "ID теста:"
@@ -97,6 +106,8 @@ ru:
         answers: "Вопросы"
         questions: "Ответы"
         actions: "Действия"
+      create:
+        question_created: "Вопрос был успешно создан"
     gists:
       index:
         header: "Список"
@@ -123,6 +134,7 @@ ru:
     home: "К списку тестов"
     admin: "Панель администратора"
     gists: "Список гистов"
+    next: "Далее"
 
   label:
     answer: "Ответ"

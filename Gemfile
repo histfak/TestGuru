@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -72,7 +72,7 @@ gem 'pry-rails'
 gem 'devise', '~> 4.0'
 
 #UI
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.2.0'
 gem 'jquery-rails'
 gem 'octicons_helper'
 

@@ -79,6 +79,9 @@ gem 'octicons_helper'
 #Net
 gem 'faraday'
 
+#pgsql
+gem 'pg'
+
 #Gist
 gem "octokit", "~> 4.0"
 gem 'dotenv-rails', groups: [:development, :test]

@@ -9,8 +9,8 @@ function passwordMatching() {
     var icon1 = document.querySelector('.octicon-check');
     var icon2 = document.querySelector('.octicon-x');
 
-    if (passwordConfirmation.value === "") {
-        icon2.classList.remove('hide')
+    if (passwordConfirmation.value === '') {
+        icon2.classList.remove('hide');
         icon1.classList.add('hide');
     } else if (password.value === passwordConfirmation.value) {
         icon1.classList.remove('hide');

@@ -1,6 +1,6 @@
 document.addEventListener('turbolinks:load', function() {
     var control = document.querySelector('#new_user');
-    if (control) {control.addEventListener('input', passwordMatching)}
+    if (control) {control.addEventListener('input', passwordMatching);}
 });
 
 function passwordMatching() {

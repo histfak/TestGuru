@@ -22,6 +22,8 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Создать бэйдж"
     label:
       test:
         title: "Название"
@@ -32,6 +34,10 @@ ru:
       answer:
         body: "Содержание ответа"
         correct: "Правильный"
+      badge:
+        title: "Название"
+        rule: "Правило"
+        image: "Ссылка на изображение"
     select:
       prompt: "Выберите категорию"
 
@@ -114,6 +120,16 @@ ru:
         question: "Вопрос"
         url: "Ссылка"
         user: "Пользователь"
+    badges:
+      index:
+        header: "Бэйджи"
+        title: "Название"
+        rule: "Правило"
+        image: "Изображение"
+        actions: "Действия"
+      new:
+        header: "Создать новый бэйдж"
+
 
   tests_mailer:
     completed_test:
@@ -128,6 +144,7 @@ ru:
     new_answer: "Создать новый ответ"
     new_test: "Создать новый тест"
     new_question: "Создать новый вопрос"
+    new_badge: "Создать новый бэйдж"
     signup: "Зарегистрироваться"
     login: "Войти"
     logout: "Выйти"

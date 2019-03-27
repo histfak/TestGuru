@@ -64,6 +64,7 @@ ru:
     index:
       achieved: "Ваши бэйджи"
       available: "Доступные бэйджи"
+      no_badges: "У вас пока нет бэйджей"
 
 
   test_passages:

@@ -56,6 +56,7 @@ en:
     index:
       achieved: "Badges achieved"
       available: "Badges available"
+      no_badges: "You don't have any badges yet"
 
   test_passages:
     result:

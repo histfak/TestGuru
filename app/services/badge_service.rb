@@ -6,8 +6,6 @@ class BadgeService
   end
 
   def calculate
-    if @test_passage.success?
-
-    end
+    # stub
   end
 end

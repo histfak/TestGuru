@@ -3,9 +3,11 @@
   <div class="totheright">
     <% if user_signed_in? %>
       <b><%= t('shared.header.welcome', name: current_user.name) %></b>
-      <%= link_to t('links.admin'), admin_tests_path if current_user.admin? %>
-      <%= link_to t('links.gists'), admin_gists_path if current_user.admin? %>
-      <%= link_to t('links.badges'), admin_badges_path if current_user.admin? %>
+      <% if current_user.admin? %>
+        <%= link_to t('links.admin'), admin_tests_path %>
+        <%= link_to t('links.gists'), admin_gists_path %>
+        <%= link_to t('links.badges'), admin_badges_path %>
+      <% end %>
       <%= link_to t('links.badges'), badges_path unless current_user.admin? %>
       <%= link_to t('links.logout'), destroy_user_session_path, method: :delete %>
     <% else %>

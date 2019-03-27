@@ -1,6 +1,6 @@
 class Admin::BadgesController < Admin::AdminController
   before_action :find_badges, only: %i[index]
-  before_action :find_badge, only: %i[destroy]
+  before_action :find_badge, only: %i[update edit destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
 
@@ -17,6 +17,17 @@ class Admin::BadgesController < Admin::AdminController
       redirect_to admin_badges_path(@badge), notice: t('.success')
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @badge.update(badge_params)
+      redirect_to admin_badges_path(@badge)
+    else
+      render :edit
     end
   end
 

@@ -1,7 +1,8 @@
 <tr>
   <td><%= badge.title %></td>
-  <td class="text-center"><%= badge.rule %></td>
-  <td class="text-center"><%= badge.image %></td>
+  <td class="text-center"><%= badge.rule.text %></td>
+  <td class="text-center"><img src="<%= "#{badge.image}" %>" alt="<%= "#{badge.title}" %>"></td>
+  <td class="text-center"><%= link_to t('links.edit'), edit_admin_badge_path(badge) %></td>
   <td class="text-center"><%= link_to t('links.delete'),
                 admin_badge_path(badge),
                 method: :delete,

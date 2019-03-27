@@ -7,10 +7,10 @@
     <%= form.text_field :title %>
   </p>
 
-<!--  <p>-->
-<!--    <%#= form.label :rule %><br>-->
-    <%#= form.select :rule, , prompt: true %>
-<!--  </p>-->
+  <p>
+    <%= form.label :rule, id: :rule %><br>
+    <%= form.select :rule, Badge.rule.options, prompt: true %>
+  </p>
 
   <p>
     <%= form.label :image %><br>

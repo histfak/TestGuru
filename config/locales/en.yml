@@ -112,6 +112,19 @@ en:
       question: "Question"
       url: "URL"
       user: "User"
+    badges:
+      index:
+        header: "Badges"
+        title: "Title"
+        rule: "Rule"
+        image: "Image"
+        actions: "Actions"
+      new:
+        header: "Create a new badge"
+      create:
+        success: "Badge was successfully created"
+      edit:
+        header: "Edit badge %{title}"
 
   tests_mailer:
     completed_test:
@@ -130,7 +143,8 @@ en:
     login: "Log in"
     logout: "Log out"
     home: "Main page"
-    admin: "Admin panel"
+    admin: "Tests List"
+    badges: "Badges List"
     gists: "Gists List"
     next: "Next"
 

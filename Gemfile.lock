@@ -93,6 +93,8 @@ GEM
     dotenv-rails (2.7.1)
       dotenv (= 2.7.1)
       railties (>= 3.2, < 6.1)
+    enumerize (2.2.2)
+      activesupport (>= 3.2)
     erubi (1.8.0)
     execjs (2.7.0)
     faraday (0.15.4)
@@ -272,6 +274,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.0)
   dotenv-rails
+  enumerize
   faraday
   jbuilder (~> 2.5)
   jquery-rails

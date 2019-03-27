@@ -129,6 +129,10 @@ ru:
         actions: "Действия"
       new:
         header: "Создать новый бэйдж"
+      create:
+        success: "Бэйдж был успешно создан"
+      edit:
+        header: "Редактировать бэйдж %{title}"
 
 
   tests_mailer:
@@ -149,8 +153,9 @@ ru:
     login: "Войти"
     logout: "Выйти"
     home: "К списку тестов"
-    admin: "Панель администратора"
+    admin: "Список тестов"
     gists: "Список гистов"
+    badges: "Список бэйджей"
     next: "Далее"
 
   label:

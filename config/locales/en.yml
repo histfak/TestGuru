@@ -52,6 +52,10 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+  badges:
+    index:
+      achieved: "Badges achieved"
+      available: "Badges available"
 
   test_passages:
     result:

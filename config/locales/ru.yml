@@ -60,6 +60,11 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+  badges:
+    index:
+      achieved: "Ваши бэйджи"
+      available: "Доступные бэйджи"
+
 
   test_passages:
     result:

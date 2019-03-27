@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     post :start, on: :member
   end
 
+  resources :badges, only: :index
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result

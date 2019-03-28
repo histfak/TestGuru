@@ -1,7 +1,7 @@
 class Badge < ApplicationRecord
   extend Enumerize
 
-  has_many :user_badges
+  has_many :user_badges, dependent: :delete_all
   has_many :users, through: :user_badges
 
   validates :title, presence: true, uniqueness: { scope: :rule }

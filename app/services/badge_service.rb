@@ -6,32 +6,40 @@ class BadgeService
   end
 
   def calculate
-    Badge.all.each do |badge|
-      add_badge(badge) if send("#{badge.rule}?")
+    badges = []
+    if @test_passage.success?
+      Badge.all.each do |badge|
+        badges << badge if send("#{badge.rule}?", badge.rule_param)
+      end
     end
+    badges
   end
 
   private
 
-  def add_badge(badge)
-    @user.badges << badge
-  end
-
   def successful_tests_uniq_ids
-    @user.test_passages.where(current_question: nil).select(&:success?).map(&:test_id).uniq
+    @successful_tests_uniq_ids ||= @user.test_passages.where(current_question: nil).select(&:success?).map(&:test_id).uniq
   end
 
-  def first_try?
-    @user.tests.where(id: @test.id).count == 1 if @test_passage.success?
+  def first_try?(_args)
+    @user.tests.where(id: @test.id).count == 1
   end
 
-  def all_tests_of_level?
-    tests_by_level_ids = Test.where(level: @test.level).ids
-    (tests_by_level_ids - successful_tests_uniq_ids).empty?
+  def all_tests_of_level?(level)
+    if level.to_i == @test.level
+      tests_by_level_ids = Test.by_level(level).ids
+      (tests_by_level_ids - successful_tests_uniq_ids).empty?
+    else
+      false
+    end
   end
 
-  def all_tests_in_category?
-    category_tests_ids = Category.find_by(title: @test.category.title).tests.ids
-    (category_tests_ids - successful_tests_uniq_ids).empty?
+  def all_tests_in_category?(title)
+    if title == @test.category.title
+      category_tests_ids = Test.by_category(title).ids
+      (category_tests_ids - successful_tests_uniq_ids).empty?
+    else
+      false
+    end
   end
 end

@@ -1,10 +1,10 @@
 class Admin::BadgesController < Admin::AdminController
-  before_action :find_badges, only: %i[index]
   before_action :find_badge, only: %i[update edit destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
 
   def index
+    @badges = Badge.all
   end
 
   def new
@@ -38,16 +38,12 @@ class Admin::BadgesController < Admin::AdminController
 
   private
 
-  def find_badges
-    @badges = Badge.all
-  end
-
   def find_badge
     @badge = Badge.find(params[:id])
   end
 
   def badge_params
-    params.require(:badge).permit(:title, :rule, :image)
+    params.require(:badge).permit(:title, :rule, :image, :rule_param)
   end
 
   def rescue_with_record_not_found

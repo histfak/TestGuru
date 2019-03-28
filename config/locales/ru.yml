@@ -37,6 +37,7 @@ ru:
       badge:
         title: "Название"
         rule: "Правило"
+        rule_param: "Опция"
         image: "Ссылка на изображение"
     select:
       prompt: "Выберите категорию"
@@ -131,6 +132,7 @@ ru:
         header: "Бэйджи"
         title: "Название"
         rule: "Правило"
+        rule_param: "Опция"
         image: "Изображение"
         actions: "Действия"
       new:
@@ -139,7 +141,6 @@ ru:
         success: "Бэйдж был успешно создан"
       edit:
         header: "Редактировать бэйдж %{title}"
-
 
   tests_mailer:
     completed_test:
@@ -167,3 +168,6 @@ ru:
   label:
     answer: "Ответ"
     correct: "Правильность"
+
+  misc:
+    rule_param_explanation: "Укажите уровень или название категории, если правило предусматривает это"

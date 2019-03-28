@@ -32,6 +32,11 @@ en:
         answer:
           body: "Body"
           correct: "Correct"
+        badge:
+          title: "Title"
+          rule: "Rule"
+          rule_param: "Option"
+          image: "Image URL"
       select:
         prompt: "Select a category"
 
@@ -122,6 +127,7 @@ en:
         header: "Badges"
         title: "Title"
         rule: "Rule"
+        rule_param: "Option"
         image: "Image"
         actions: "Actions"
       new:
@@ -156,3 +162,6 @@ en:
     label:
       answer: "Answer"
       correct: "Correct"
+
+    misc:
+      rule_param_explanation: "Specify level or category title if the rule requires it"

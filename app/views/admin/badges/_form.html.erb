@@ -12,6 +12,13 @@
     <%= form.select :rule, Badge.rule.options, prompt: true %>
   </p>
 
+  <%= t('misc.rule_param_explanation') %><br>
+
+  <p>
+    <%= form.label :rule_param, class: :hide %><br>
+    <%= form.text_field :rule_param %>
+  </p>
+
   <p>
     <%= form.label :image %><br>
     <%= form.text_field :image %>

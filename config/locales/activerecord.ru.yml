@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      badge: "Бэйдж"
 
     attributes:
       test:
@@ -12,3 +13,10 @@ ru:
     errors:
       messages:
         blank: "не может быть пустым"
+
+  enumerize:
+    badge:
+      rule:
+        first_try: "С первой попытки"
+        all_tests_in_category: "Все тесты в категории"
+        all_tests_of_level: "Все тесты уровня"

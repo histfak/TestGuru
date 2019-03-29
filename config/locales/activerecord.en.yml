@@ -2,6 +2,7 @@ en:
   activerecord:
     models:
       test: "Test"
+      badge: "Badge"
 
     attributes:
       test:
@@ -12,3 +13,10 @@ en:
     errors:
       messages:
         blank: "can't be blank"
+
+  enumerize:
+    badge:
+      rule:
+        first_try: "First try"
+        all_tests_in_category: "All tests in a specific category"
+        all_tests_of_level: "All test of a specific level"

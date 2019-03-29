@@ -1,0 +1,21 @@
+<h1><%= t('.header') %></h1>
+<div class="row mt-3">
+  <p><%= link_to t('links.new_badge'), new_admin_badge_path %></p>
+
+  <%= render 'shared/errors', resource: @badge %>
+
+  <table class="table table-hover table-condensed">
+    <tr>
+      <th class="sort-by-title pointer">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th class="text-center"><%= t('.rule') %></th>
+      <th class="text-center"><%= t('.image') %></th>
+      <th colspan="2" class="text-center"><%= t('.actions') %></th>
+    </tr>
+
+    <%= render @badges %>
+  </table>
+</div>

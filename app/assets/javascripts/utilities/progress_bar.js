@@ -4,6 +4,6 @@ document.addEventListener('turbolinks:load', function() {
     if (progressBar) {
         var currentQuestion = progressBar.dataset.current;
         var allQuestions = progressBar.dataset.all;
-        progressBar.style.width = (currentQuestion / allQuestions * 100) + "%";
+        progressBar.style.width = (currentQuestion / allQuestions * 100) + '%';
     }
 });

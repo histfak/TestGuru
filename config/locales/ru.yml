@@ -22,6 +22,8 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Создать бэйдж"
     label:
       test:
         title: "Название"
@@ -32,6 +34,11 @@ ru:
       answer:
         body: "Содержание ответа"
         correct: "Правильный"
+      badge:
+        title: "Название"
+        rule: "Правило"
+        rule_param: "Опция"
+        image: "Ссылка на изображение"
     select:
       prompt: "Выберите категорию"
 
@@ -54,6 +61,12 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+  badges:
+    index:
+      achieved: "Ваши бэйджи"
+      available: "Доступные бэйджи"
+      no_badges: "У вас пока нет бэйджей"
+
 
   test_passages:
     result:
@@ -114,6 +127,20 @@ ru:
         question: "Вопрос"
         url: "Ссылка"
         user: "Пользователь"
+    badges:
+      index:
+        header: "Бэйджи"
+        title: "Название"
+        rule: "Правило"
+        rule_param: "Опция"
+        image: "Изображение"
+        actions: "Действия"
+      new:
+        header: "Создать новый бэйдж"
+      create:
+        success: "Бэйдж был успешно создан"
+      edit:
+        header: "Редактировать бэйдж %{title}"
 
   tests_mailer:
     completed_test:
@@ -128,14 +155,19 @@ ru:
     new_answer: "Создать новый ответ"
     new_test: "Создать новый тест"
     new_question: "Создать новый вопрос"
+    new_badge: "Создать новый бэйдж"
     signup: "Зарегистрироваться"
     login: "Войти"
     logout: "Выйти"
     home: "К списку тестов"
-    admin: "Панель администратора"
+    admin: "Список тестов"
     gists: "Список гистов"
+    badges: "Список бэйджей"
     next: "Далее"
 
   label:
     answer: "Ответ"
     correct: "Правильность"
+
+  misc:
+    rule_param_explanation: "Укажите уровень или название категории, если правило предусматривает это"

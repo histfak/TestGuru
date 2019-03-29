@@ -32,6 +32,11 @@ en:
         answer:
           body: "Body"
           correct: "Correct"
+        badge:
+          title: "Title"
+          rule: "Rule"
+          rule_param: "Option"
+          image: "Image URL"
       select:
         prompt: "Select a category"
 
@@ -52,6 +57,11 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+  badges:
+    index:
+      achieved: "Badges achieved"
+      available: "Badges available"
+      no_badges: "You don't have any badges yet"
 
   test_passages:
     result:
@@ -112,6 +122,20 @@ en:
       question: "Question"
       url: "URL"
       user: "User"
+    badges:
+      index:
+        header: "Badges"
+        title: "Title"
+        rule: "Rule"
+        rule_param: "Option"
+        image: "Image"
+        actions: "Actions"
+      new:
+        header: "Create a new badge"
+      create:
+        success: "Badge was successfully created"
+      edit:
+        header: "Edit badge %{title}"
 
   tests_mailer:
     completed_test:
@@ -130,10 +154,14 @@ en:
     login: "Log in"
     logout: "Log out"
     home: "Main page"
-    admin: "Admin panel"
+    admin: "Tests List"
+    badges: "Badges List"
     gists: "Gists List"
     next: "Next"
 
     label:
       answer: "Answer"
       correct: "Correct"
+
+    misc:
+      rule_param_explanation: "Specify level or category title if the rule requires it"

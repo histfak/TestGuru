@@ -6,6 +6,8 @@ class Answer < ApplicationRecord
 
   scope :correct, -> { where(correct: true) }
 
+  private
+
   def validate_answers_number
     errors.add(:base, 'you can\'t have less than 1 and more than 4 answers') if question.answers.count > 4
   end

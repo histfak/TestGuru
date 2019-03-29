@@ -28,6 +28,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень"
+        timer: "Таймер"
         category_id: "Категория"
       question:
         body: "Содержание вопроса"
@@ -78,6 +79,7 @@ ru:
       total: "Всего:"
       current: "Текущий:"
       passed: "Ваша позиция"
+      time_remained: "Оставшееся время: "
     gist:
       success: "Gist успешно сохранён! Ссылка: %{url}"
       failure: "Во время сохранения gist произошла ошибка"
@@ -90,6 +92,7 @@ ru:
         header: "Тесты"
         title: "Название"
         level: "Уровень"
+        timer: "Таймер"
         questions: "Вопросы"
         actions: "Действия"
       edit:
@@ -99,6 +102,7 @@ ru:
       show:
         title: "Название"
         level: "Уровень"
+        timer: "Таймер"
         questions: "Вопросы"
         actions: "Действия"
       form_inline:

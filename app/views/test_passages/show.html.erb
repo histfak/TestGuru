@@ -1,10 +1,17 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
-  <b><%= t('.questions') %><br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %></b>
+  <b><%= t('.questions') %>
+    <br><%= t('.total') %> <%= @test_passage.test.questions.count %> <%= t('.current') %> <%= @test_passage.current_position %>
+  </b>
+</p>
+<p>
+  <% if @test_passage.test.has_timer? %>
+    <%= t('.time_remained') %><%= content_tag :span, @test_passage.test.timer, class: 'timer badge badge-primary text-wrap' %>
+  <% end %>
 </p>
 <div class="progress">
-  <%= content_tag :div, t('.passed'), class: 'progress-bar progress-bar-striped progress-bar-animated bg-info', data: { current: @test_passage.current_position, all: @test_passage.test.questions.count } %>
+  <%= content_tag :div, t('.passed'), class: 'progress-bar progress-bar-striped progress-bar-animated bg-info', data: {current: @test_passage.current_position, all: @test_passage.test.questions.count} %>
 </div>
 <br>
 <p><b>

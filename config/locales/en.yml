@@ -26,6 +26,7 @@ en:
         test:
           title: "Title"
           level: "Level"
+          timer: "Timer"
           category_id: "Category"
         question:
           body: "Body"
@@ -73,6 +74,7 @@ en:
       total: "Total:"
       current: "Current:"
       passed: "Your position"
+      time_remained: "Time remained: "
     gist:
       success: "Gist has been successfully created! URL: "
       failure: "An error occurred while saving gist"
@@ -85,6 +87,7 @@ en:
         header: "Tests"
         title: "Title"
         level: "Level"
+        timer: "Timer"
         questions: "Questions"
         actions: "Actions"
       edit:
@@ -94,6 +97,7 @@ en:
       show:
         title: "Title"
         level: "Level"
+        timer: "Timer"
         questions: "Questions"
         actions: "Actions"
       form_inline:

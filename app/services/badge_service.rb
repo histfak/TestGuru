@@ -7,11 +7,8 @@ class BadgeService
 
   def calculate
     badges = []
-    if @test_passage.success?
-      Badge.all.each do |badge|
-        badges << badge if send("#{badge.rule}?", badge.rule_param)
-      end
-    end
+    return [] unless @test_passage.success?
+    Badge.all.map { |badge| badges << badge if send("#{badge.rule}?", badge.rule_param) }
     badges
   end
 
@@ -26,20 +23,14 @@ class BadgeService
   end
 
   def all_tests_of_level?(level)
-    if level.to_i == @test.level
-      tests_by_level_ids = Test.by_level(level).ids
-      (tests_by_level_ids - successful_tests_uniq_ids).empty?
-    else
-      false
-    end
+    return false unless level.to_i == @test.level
+    tests_by_level_ids = Test.by_level(level).ids
+    (tests_by_level_ids - successful_tests_uniq_ids).empty?
   end
 
   def all_tests_in_category?(title)
-    if title == @test.category.title
-      category_tests_ids = Test.by_category(title).ids
-      (category_tests_ids - successful_tests_uniq_ids).empty?
-    else
-      false
-    end
+    return false unless title == @test.category.title
+    category_tests_ids = Test.by_category(title).ids
+    (category_tests_ids - successful_tests_uniq_ids).empty?
   end
 end

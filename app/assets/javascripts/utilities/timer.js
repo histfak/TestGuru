@@ -3,7 +3,6 @@ document.addEventListener('turbolinks:load', function () {
 
     if (timer) {
         var timerTime = timer.dataset.timer;
-        var testPassageId = timer.dataset.testPassageId;
 
         setInterval(function () {
             if (timerTime > 0) {
@@ -12,7 +11,7 @@ document.addEventListener('turbolinks:load', function () {
 
             else {
                 alert('Время вышло!');
-                window.location.replace('/test_passages/' + testPassageId + '/result');
+                document.querySelector('form').submit();
             }
 
             timer.innerHTML = parseInt(timerTime / 60) + ':' + (timerTime % 60 ? timerTime % 60 : '00');

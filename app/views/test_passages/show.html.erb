@@ -7,7 +7,7 @@
 </p>
 <p>
   <% if @test_passage.test.timer? %>
-    <%= t('.time_remained') %><%= content_tag :span, initial_timer_value(@test_passage), class: 'timer badge badge-primary text-wrap', data: { timer: @test_passage.time_left, test_passage_id: @test_passage.id } %>
+    <%= t('.time_remained') %><%= content_tag :span, initial_timer_value(@test_passage), class: 'timer badge badge-primary text-wrap', data: { timer: @test_passage.time_left } %>
   <% end %>
 </p>
 <div class="progress">

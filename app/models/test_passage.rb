@@ -34,6 +34,10 @@ class TestPassage < ApplicationRecord
     expires_at < Time.current
   end
 
+  def timer_revise
+    test.timer? && time_is_up?
+  end
+
   private
 
   def correct_answer?(answer_ids)

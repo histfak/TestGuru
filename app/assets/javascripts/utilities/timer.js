@@ -11,7 +11,7 @@ document.addEventListener('turbolinks:load', function () {
 
             else {
                 alert('Время вышло!');
-                document.querySelector('form').submit();
+                document.querySelector('.test_passage_form').submit();
             }
 
             timer.innerHTML = parseInt(timerTime / 60) + ':' + (timerTime % 60 ? timerTime % 60 : '00');

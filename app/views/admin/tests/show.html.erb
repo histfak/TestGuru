@@ -8,6 +8,11 @@
   <%= @test.level %>
 </p>
 
+<p>
+  <strong><%= t('.timer') %></strong>
+  <%= @test.timer %>
+</p>
+
 <%= link_to t('links.new_question'), new_admin_test_question_path(@test) %><br>
 
 <table class="table table-hover table-condensed">

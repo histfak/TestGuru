@@ -26,6 +26,18 @@ class TestPassage < ApplicationRecord
     (correct_questions.to_f / test.questions.count * 100).round
   end
 
+  def time_left
+    (expires_at - Time.current).to_i
+  end
+
+  def time_is_up?
+    expires_at < Time.current
+  end
+
+  def timer_check_passed?
+    test.timer? && time_is_up?
+  end
+
   private
 
   def correct_answer?(answer_ids)
@@ -46,5 +58,9 @@ class TestPassage < ApplicationRecord
 
   def set_next_question
     self.current_question = next_question
+  end
+
+  def expires_at
+    created_at + test.timer.minutes
   end
 end
